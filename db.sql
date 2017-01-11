@@ -6,4 +6,5 @@ use counter;
 create table counter(
 	counter int(6)
 );
-insert into counter values (0)
+insert into counter values (0);
+update counter set counter=1
