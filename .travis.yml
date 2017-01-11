@@ -10,5 +10,6 @@ before_script:
   - sudo service mysql restart
   - sudo mysql < db.sql
   - sudo service apache2 restart
-  - curl localhost
+  - ls /var/www
+  - ls /var/www/html
 script: python python_unit_test.py
