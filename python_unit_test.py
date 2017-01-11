@@ -5,7 +5,7 @@ import os
 class TestStringMethods(unittest.TestCase):
 
   def test_upper(self):
-      htmlcontent = urllib2.urlopen("http://localhost").read()
+      htmlcontent = urllib2.urlopen("http://localhost/index.php").read()
       print(htmlcontent)
       self.assertEqual('foo'.upper(), 'FOO')
 

@@ -12,6 +12,4 @@ before_script:
   - sudo service apache2 restart
   - sudo cp ./* /var/www
   - sudo ls /var/www
-  - curl localhost/index.php
-  - sudo cat /var/log/apache2/error.log
 script: python python_unit_test.py
