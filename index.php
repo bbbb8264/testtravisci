@@ -30,7 +30,8 @@
 	Current Number:<span id="number">
 	<?php
 		$result = $con->query("select counter from counter");
-		echo $result->fetch_assoc()['counter'];
+		$row = $result->fetch_assoc();
+		echo $row['counter'];
 	?></span>
 	<br><button onclick="plusone()">plus 1</button>
 </body>
