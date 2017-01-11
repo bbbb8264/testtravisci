@@ -5,8 +5,8 @@ sudo: required
 services:
   - mysql
 before_script:
-  - sudo cp -r ./* /var/www/html
   - sudo apt-get install apache2
+  - sudo cp -r ./* /var/www/html
   - sudo apt-get install php5-mysqlnd
   - sudo service mysql restart
   - sudo mysql < db.sql
