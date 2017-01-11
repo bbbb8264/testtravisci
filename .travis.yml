@@ -11,4 +11,5 @@ before_script:
   - sudo mysql < db.sql
   - sudo service apache2 restart
   - sudo cp ./* /var/www
+  - sudo ls /var/www
 script: python python_unit_test.py
