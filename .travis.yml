@@ -6,7 +6,7 @@ services:
   - mysql
 before_script:
   - sudo apt-get install apache2
-  - sudo apt-get install php5-mysqlnd
+  - sudo apt-get install php5-mysqlnd libapache2-mod-php5
   - sudo service mysql restart
   - sudo mysql < db.sql
   - sudo service apache2 restart
