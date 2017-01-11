@@ -1,8 +1,9 @@
 dependencies:
   post:
-    - sudo cp -r /home/ubuntu/testcircleci /var/www/html
+    - sudo cp -r ./* /var/www/html
+    - sudo apt-get install apache2
     - sudo apt-get install php5-mysqlnd
     - sudo service mysql restart
     - sudo mysql < db.sql
     - sudo service apache2 restart
-    - curl localhost/testcircleci/index.php
+    - ls /var/www/html

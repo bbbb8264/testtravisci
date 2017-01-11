@@ -1,6 +1,15 @@
 language: php
 php:
   - '5.4'
+sudo: required
 services:
   - mysql
+before_script:
+  - sudo cp -r ./* /var/www/html
+  - sudo apt-get install apache2
+  - sudo apt-get install php5-mysqlnd
+  - sudo service mysql restart
+  - sudo mysql < db.sql
+  - sudo service apache2 restart
+  - ls /var/www/html
 script: python python_unit_test.py
